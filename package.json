@@ -1,6 +1,6 @@
 {
   "name": "react-popup-layers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Front layer and popup which is rendered on it relative to activator position",
   "main": "dist/index.js",
   "scripts": {
