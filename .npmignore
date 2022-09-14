@@ -1,2 +1,7 @@
 src
 example
+.babelrc
+.eslintrc
+gulpfile.js
+postcss.config.js
+tsconfig.json
