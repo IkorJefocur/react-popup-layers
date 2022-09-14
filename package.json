@@ -1,0 +1,63 @@
+{
+  "name": "react-popup-layers",
+  "version": "0.1.0",
+  "description": "Front layer and popup which is rendered on it relative to activator position",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "gulp test",
+    "test-server": "http-server example/dist --port 3000 -c-1",
+    "clear": "rm -rf dist example/dist",
+    "deploy": "npm run clear && npm run build && npm run test && npm publish"
+  },
+  "keywords": [
+    "popup",
+    "dropdown",
+    "modal",
+    "tooltip",
+    "react",
+    "component",
+    "layer",
+    "layers",
+    "z-index",
+    "css"
+  ],
+  "author": "Ikor Jefocur",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IkorJefocur/react-popup-layers"
+  },
+  "dependencies": {
+    "@bem-react/classname": "^1.5.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.23.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-filter": "^7.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-class-prefix": "^0.3.0",
+    "postcss-custom-properties-transformer": "^1.0.0",
+    "sass": "^1.54.8",
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.74.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

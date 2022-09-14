@@ -1,0 +1,49 @@
+.Container
+	--Container_startOffset: initial
+	--Container_endOffset: initial
+	--Container_flex: 0 1
+
+	display: grid
+
+	&_direction
+
+		&_horizontal
+			display: flex
+
+		&_vertical
+			display: flex
+			flex-direction: column
+
+	&_positioning
+
+		&_stretch
+			place-content: stretch
+			grid-template: 100% / 100%
+
+		&_center
+			place-content: center
+
+			&:before
+				content: ""
+				flex-basis: calc(max(var(--Container_startOffset, 0) - .5, 0) * 200%)
+
+			&:after
+				content: ""
+				flex-basis: calc(max(1 - var(--Container_startOffset, 0) - .5, 0) * 200%)
+
+		&_offset
+			$flex: var(--Container_flex)
+
+			--Container_positioning_start: #{$flex} calc(var(--Container_startOffset) * 100%)
+			--Container_positioning_end: #{$flex} calc(var(--Container_endOffset) * 100%)
+
+			&:before
+				content: ""
+				flex: var(--Container_positioning_start, auto)
+
+			&:after
+				content: ""
+				flex: var(--Container_positioning_end, auto)
+
+	&_strictPositioning
+		--Container_flex: 0 0

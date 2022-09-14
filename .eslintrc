@@ -1,0 +1,46 @@
+{
+
+	"extends": ["eslint:recommended", "plugin:react-hooks/recommended"],
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": 2021,
+		"requireConfigFile": false
+	},
+
+	"rules": {
+		"indent": ["error", "tab"],
+		"linebreak-style": ["error", "unix"],
+		"semi": ["error", "always"],
+		"no-undef": "off",
+		"no-unused-vars": "off",
+		"max-len": ["error", {
+			"code": 80,
+			"comments": 100,
+			"tabWidth": 3
+		}]
+	},
+
+	"overrides": [
+		{
+			"files": ["**.ts", "**.d.ts", "**.tsx"],
+			"extends": ["plugin:@typescript-eslint/recommended"],
+			"parser": "@typescript-eslint/parser",
+			"plugins": ["@typescript-eslint"],
+
+			"rules": {
+				"semi": "off",
+				"indent": "off",
+				"@typescript-eslint/no-unused-vars": "off",
+				"@typescript-eslint/semi": ["error", "always"],
+				"@typescript-eslint/indent": ["error", "tab", {
+					"SwitchCase": 0
+				}],
+				"@typescript-eslint/no-empty-function": "off"
+			}
+		}
+	],
+
+	"root": true,
+	"ignorePatterns": ["dist/**"]
+
+}
