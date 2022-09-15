@@ -97,5 +97,6 @@ const Context = createContext<PrivateContextProps>({
 	nesting: 0,
 	children: new Set()
 });
+Context.displayName = 'LayersControlContext';
 
 const preventedCloseEvents: WeakSet<SyntheticEvent> = new WeakSet();
