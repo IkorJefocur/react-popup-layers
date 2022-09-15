@@ -29,9 +29,11 @@
     "url": "https://github.com/IkorJefocur/react-popup-layers"
   },
   "dependencies": {
-    "@bem-react/classname": "^1.5.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@bem-react/classname": "^1.5.12"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
